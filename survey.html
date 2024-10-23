@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey's | Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="overlay"></div>
+<div class="container">
+
+  <h5>"Share your thoughts in this short survey to help shape the future!"</h5>
+  <h3>Discover Your Solo Preferences</h3>
+
+  <div>
+    <p id="typingText"></p>
+  </div>
+
+  <!-- 
+    - Form
+  -->
+
+  <form id="userForm">
+
+    <div class="form-field">
+      <label for="name">Your Name 
+        <i class="fas fa-info-circle info-icon"></i>
+        <div class="info-popup">We need your name to personalize your experience!</div>
+      </label>
+      <input type="text" id="name" name="name" required placeholder="Enter your name">
+    </div>
+
+    <div class="form-field">
+      <label for="gender">Gender
+        <i class="fas fa-info-circle info-icon"></i>
+        <div class="info-popup">How much time do you need to feel refreshed?</div>
+      </label>
+      <div class="dropdown">
+        <select id="gender" name="gender" required class="dropbtn">
+          <option value="" disabled selected>Select your option</option>
+          <option value="Female">Female</option>
+          <option value="Male">Male</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label for="depression">Have you ever felt depressed in your life
+        <i class="fas fa-info-circle info-icon"></i>
+        <div class="info-popup">How much time do you need to feel refreshed?</div>
+      </label>
+      <div class="dropdown">
+        <select id="depression" name="depression" required class="dropbtn">
+          <option value="" disabled selected>Select your option</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+          <option value="Still experiencing depression!">Still experiencing depression!</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label for="activity">What type of stress are you currently dealing with?
+        <i class="fas fa-info-circle info-icon"></i>
+        <div class="info-popup">What helps you relax the most when you are alone?</div>
+      </label>
+      <textarea id="activity" name="activity" rows="3" placeholder="Specify your answer" required></textarea>
+    </div>
+
+    <div class="form-field">
+      <label for="stress-help">What activities help you the most when you're feeling stressed?
+        <i class="fas fa-info-circle info-icon"></i>
+        <div class="info-popup">How much time do you need to feel refreshed?</div>
+      </label>
+      <div class="dropdown">
+        <select id="stress-help" name="stress-help" required class="dropbtn">
+          <option value="" disabled selected>Select your option</option>
+          <option value="Talking to someone">Talking to someone</option>
+          <option value="Spending time alone">Spending time alone</option>
+          <option value="Meditation">Meditation</option>
+          <option value="Physical exercise">Physical exercise</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label for="alone-location">Where do you prefer to be when you need alone time?
+        <i class="fas fa-info-circle info-icon"></i>
+        <div class="info-popup">How much time do you need to feel refreshed?</div>
+      </label>
+      <div class="dropdown">
+        <select id="alone-location" name="alone-location" required class="dropbtn">
+          <option value="" disabled selected>Select your option</option>
+          <option value="Home">Home</option>
+          <option value="Outdoor">Outdoor</option>
+          <option value="Gym">Gym</option>
+          <option value="Coffee Shop">Coffee Shop</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label for="privacy">How important is privacy to you when you're dealing with stress?
+        <i class="fas fa-info-circle info-icon"></i>
+        <div class="info-popup">How much time do you need to feel refreshed?</div>
+      </label>
+      <div class="dropdown">
+        <select id="privacy" name="privacy" required class="dropbtn">
+          <option value="" disabled selected>Select your option</option>
+          <option value="Extremely important">Extremely important</option>
+          <option value="Somewhat important">Somewhat important</option>
+          <option value="Not important">Not important</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label for="privacy-need">How often do you feel the need for privacy during stressful times?
+        <i class="fas fa-info-circle info-icon"></i>
+        <div class="info-popup">How much time do you need to feel refreshed?</div>
+      </label>
+      <div class="dropdown">
+        <select id="privacy-need" name="privacy-need" required class="dropbtn">
+          <option value="" disabled selected>Select your option</option>
+          <option value="Always">Always</option>
+          <option value="Sometimes">Sometimes</option>
+          <option value="Rarely">Rarely</option>
+          <option value="Never">Never</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label for="self-care">How many hours a day do you dedicate to self-care or alone time?
+        <i class="fas fa-info-circle info-icon"></i>
+        <div class="info-popup">How much time do you need to feel refreshed?</div>
+      </label>
+      <div class="dropdown">
+        <select id="self-care" name="self-care" required class="dropbtn">
+          <option value="" disabled selected>Select your option</option>
+          <option value="Less than 1 hour">Less than 1 hour</option>
+          <option value="1-2 hours">1-2 hours</option>
+          <option value="2-4 hours">2-4 hours</option>
+          <option value="More than 4 hours">More than 4 hours</option>
+        </select>
+      </div>
+    </div>
+
+    <input class="btn" type="submit" value="Submit">
+
+  </form>
+
+<!-- 
+  - Footer
+-->
+
+  <div class="home"><h5><a href="/UACP.html" target="_blank">User Agreement and Consent Policy</a></h5></div>
+
+  <div class="foot">
+    <footer>&copy; 2024 Survey's - By <a href="https://github.com/Its-Vinz" target="_blank">Vinz</a></footer> 
+  </div> 
+
+  <div class="home"><h5>Issued in Public Interest:
+    This survey is conducted for public benefit, and your responses will be used for research purposes. Your privacy is ensured.</h5>
+  </div>
+
+
+  <!-- 
+    - Consent-form and welcome-note
+  -->
+
+  <div class="blur-background"></div>
+
+    <div class="popup">
+      <div class="popup-content">
+        <h4>Your Opinion Matters!</h4>
+        <p>This survey is designed to gather your preferences and activities you enjoy alone. Your feedback is greatly appreciated!<br> <br> By participating in this survey, you consent to the collection of your responses for research purposes. Your participation is voluntary, and your responses will remain confidential.</p>
+        <input type="checkbox" id="consentCheckbox" required>
+        <label style="color: rgb(41, 41, 41); font-size: 0.9rem;"><a href="/UACP.html" target="_blank" style="text-decoration: none;">User Agreement and Consent Policy</a>, I have read and agree to the consent statement.</label>
+        <button class="btn" id="continueButton" onclick="proceedToSurvey()" disabled>Continue</button>
+      </div>
+    </div>
+
+</div>
+
+<!-- 
+  - Scripts Goes Here!
+-->
+
+<!-- 
+  - Consent-Form Handler
+-->
+<script>
+// On page load, show the popup and blur background
+window.addEventListener('DOMContentLoaded', function() {
+    const blurBackground = document.querySelector('.blur-background');
+    const popup = document.querySelector('.popup');
+    
+    blurBackground.classList.add('visible');
+    popup.classList.add('visible');
+});
+
+// Enable the "Continue" button only when the checkbox is checked
+document.getElementById('consentCheckbox').addEventListener('change', function() {
+    document.getElementById('continueButton').disabled = !this.checked;
+});
+
+// Proceed to the survey and hide the consent popup
+function proceedToSurvey() {
+    const consentGiven = document.getElementById('consentCheckbox').checked;
+
+    closePopup();  // Close the consent popup
+    showSurveyForm(consentGiven);  // Proceed with the survey
+}
+
+// Log whether user consent was given
+function showSurveyForm(consentGiven) {
+    console.log('User consent given:', consentGiven);
+}
+
+// Close the popup by removing the 'visible' class
+function closePopup() {
+    document.querySelector('.popup').classList.remove('visible');
+    document.querySelector('.blur-background').classList.remove('visible');
+}
+</script>
+
+<!-- 
+  - Thank You Redirect Page
+-->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector("form");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // Prevent the form from refreshing the page
+
+    // Redirect to Thankyou.html page after a short delay (optional delay)
+    setTimeout(() => {
+      window.location.href = "Thankyou.html"; // Redirect to the thank you page
+    }, 5000); // 0.5-second delay before redirect (optional)
+  });
+})
+</script>
+
+<!-- 
+  - Typing text effect 
+-->
+<script>
+    const texts = [
+        "Share your moments of bliss with us!",
+        "अपने आनंद के क्षणों को हमारे साथ साझा करें!",
+        "तुमच्या आनंदाच्या क्षणांना आमच्यासोबत शेअर करा!"
+    ];
+
+    let textIndex = 0;
+    let charIndex = 0;
+    const typingTextElement = document.getElementById('typingText');
+    const typingSpeed = 60; // Faster typing speed in milliseconds
+    const deletingSpeed = 50; // Faster deleting speed in milliseconds
+    const delayBetweenTexts = 1000; // Shorter delay before starting to type the next text
+
+    function typeText() {
+        if (charIndex < texts[textIndex].length) {
+            typingTextElement.textContent += texts[textIndex].charAt(charIndex);
+            charIndex++;
+            setTimeout(typeText, typingSpeed);
+        } else {
+            setTimeout(deleteText, delayBetweenTexts);
+        }
+    }
+
+    function deleteText() {
+        if (charIndex > 0) {
+            typingTextElement.textContent = texts[textIndex].substring(0, charIndex - 1);
+            charIndex--;
+            setTimeout(deleteText, typingSpeed);
+        } else {
+            textIndex = (textIndex + 1) % texts.length;
+            setTimeout(typeText, typingSpeed);
+        }
+    }
+    setTimeout(typeText, typingSpeed);
+</script>
+
+</body>
+</html>
